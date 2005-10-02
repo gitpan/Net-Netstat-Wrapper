@@ -1,4 +1,4 @@
-Net::Netstat::Wrapper version 0.01
+Net::Netstat::Wrapper version 0.02
 ==================================
 
 Net::Netstat::Wrapper module provides to you a simple way for getting the current

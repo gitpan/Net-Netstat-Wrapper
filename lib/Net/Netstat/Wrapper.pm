@@ -6,7 +6,7 @@ package Net::Netstat::Wrapper;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 0.01;
+$VERSION = 0.02;
 
 my $cmd   = 'netstat';
 my $flags = '-na';
@@ -106,6 +106,11 @@ __END__
 
   Net::Netstat::Wrapper - Perl module for getting the current tcp open ports 
 
+=head1 DESCRIPTION
+
+  Netstat module provides to you a simple way for getting the current tcp open ports
+  (ports, ip address interfaces) on a local system (Linux, Win*, Mac OS X 10.3.9).
+
 =head1 SYNOPSIS
 
   use Net::Netstat::Wrapper;
@@ -141,11 +146,6 @@ __END__
   @netstat = Net::Netstat::Wrapper->pid_pname();
 
   Get the pid and process's name that bind a tcp port. This method works only on Linux.
-
-=head1 DESCRIPTION
-
-  Netstat module provides to you a simple way for getting the current tcp open ports
-  (ports, ip address interfaces) on a local system (Linux, Win*, Mac OS X 10.3.9).
 
 =head1 SYSTEM REQUIREMENTS
 

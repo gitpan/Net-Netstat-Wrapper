@@ -1,5 +1,8 @@
 Revision history for Perl extension Netstat.
 
+0.02  Sun Oct  2 12:06:02 2005 
+	- Fixed "DESCRIPTION" order in documentation
+
 0.01  Tue Set  29 12:52:33 2005
 	- original version; created by h2xs 1.23 with options
 		-XAn Net::Netstat::Wrapper 
