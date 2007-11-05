@@ -5,12 +5,16 @@ package Net::Netstat::Wrapper;
 # and/or modify it under the same terms as Perl itself.
 
 use strict;
+use Carp;
 use vars qw($VERSION);
-$VERSION = 0.02;
+$VERSION = 0.03;
 
-my $cmd   = 'netstat';
-my $flags = '-na';
+$|=1;
+
 my $so = $^O;
+my $cmd = 'netstat';
+$cmd = '/bin/netstat' if $so ne 'MSWin32';
+my $flags = '-na';
 my @tcp;
 
 my @output = `$cmd $flags`;
@@ -93,7 +97,7 @@ sub pid_pname{
 		chomp @pid_pname;
 		return @pid_pname;
 	} elsif ($so =~ /cygwin|MSWin32/){
-		die "This method works only on Linux.";
+		croak "'pid_pname' method works only on Linux system.";
 	}
 }
 

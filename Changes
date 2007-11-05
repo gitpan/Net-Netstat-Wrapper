@@ -1,5 +1,8 @@
 Revision history for Perl extension Netstat.
 
+0.03  Sat Nov  3 00:57:02 2007
+	- add absolute path if $so ne 'MSWin32';
+
 0.02  Sun Oct  2 12:06:02 2005 
 	- Fixed "DESCRIPTION" order in documentation
 
